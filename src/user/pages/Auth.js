@@ -97,7 +97,7 @@ const Auth = () => {
                 formData.append('email', formState.inputs.email.value);
                 formData.append('name', formState.inputs.name.value);
                 formData.append('password', formState.inputs.password.value);
-                formData.append('image', formState.inputs.image.value);
+                // formData.append('image', formState.inputs.image.value);
 
                 console.log(formData);
 
