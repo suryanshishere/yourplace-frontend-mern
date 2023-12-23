@@ -1,0 +1,41 @@
+[debug] [2023-12-23T04:22:45.121Z] ----------------------------------------------------------------------
+[debug] [2023-12-23T04:22:45.124Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-12-23T04:22:45.125Z] CLI Version:   13.0.2
+[debug] [2023-12-23T04:22:45.125Z] Platform:      win32
+[debug] [2023-12-23T04:22:45.125Z] Node Version:  v20.9.0
+[debug] [2023-12-23T04:22:45.125Z] Time:          Sat Dec 23 2023 09:52:45 GMT+0530 (India Standard Time)
+[debug] [2023-12-23T04:22:45.125Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-23T04:22:45.195Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-23T04:22:45.196Z] > authorizing via signed-in user (suryasingh11112003@gmail.com)
+[debug] [2023-12-23T04:22:45.196Z] [iam] checking project yourplace-frontend-mern for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-23T04:22:45.198Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yourplace-frontend-mern:testIamPermissions [none]
+[debug] [2023-12-23T04:22:45.198Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yourplace-frontend-mern:testIamPermissions x-goog-quota-user=projects/yourplace-frontend-mern
+[debug] [2023-12-23T04:22:45.198Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yourplace-frontend-mern:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-23T04:22:46.816Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yourplace-frontend-mern:testIamPermissions 200
+[debug] [2023-12-23T04:22:46.817Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yourplace-frontend-mern:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-23T04:22:46.818Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yourplace-frontend-mern [none]
+[debug] [2023-12-23T04:22:47.594Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yourplace-frontend-mern 200
+[debug] [2023-12-23T04:22:47.594Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yourplace-frontend-mern {"projectId":"yourplace-frontend-mern","projectNumber":"120267409511","displayName":"yourplace-frontend-mern","name":"projects/yourplace-frontend-mern","resources":{"hostingSite":"yourplace-frontend-mern"},"state":"ACTIVE","etag":"1_63617fff-72ae-41a8-b552-dbd3b2dadfe3"}
+[info] 
+[info] === Deploying to 'yourplace-frontend-mern'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-12-23T04:22:47.603Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/yourplace-frontend-mern/versions [none]
+[debug] [2023-12-23T04:22:47.603Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/yourplace-frontend-mern/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-12-23T04:22:49.116Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/yourplace-frontend-mern/versions 200
+[debug] [2023-12-23T04:22:49.116Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/yourplace-frontend-mern/versions {"name":"projects/120267409511/sites/yourplace-frontend-mern/versions/57c9bf7676a47dce","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[yourplace-frontend-mern]: beginning deploy... 
+[debug] [2023-12-23T04:22:49.238Z] Error: EPERM: operation not permitted, scandir 'D:/SSSSSSSSSSSSSS/mern/frontend/build/firebase-debug.log'
+    at Object.readdirSync (node:fs:1513:3)
+    at GlobSync._readdir (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\surya\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
