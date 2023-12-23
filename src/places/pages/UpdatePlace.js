@@ -40,7 +40,7 @@ const UpdatePlace = () => {
     const fetchPlace = async () => {
       try {
         const responseData = await sendRequest(
-          `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`
+          `https://yourplace-backend-mern.vercel.app/api/places/${placeId}`
         );
         setLoadedPlace(responseData.place);
         setFormData(
@@ -67,7 +67,7 @@ const UpdatePlace = () => {
     
     try {
       await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`,
+        `https://yourplace-backend-mern.vercel.app/api/places/${placeId}`,
         'PATCH',
         JSON.stringify({
           title: formState.inputs.title.value,

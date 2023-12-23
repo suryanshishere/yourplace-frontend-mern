@@ -76,7 +76,7 @@ const Auth = () => {
         if (isLoginMode) {
             try {
                 const responseData = await sendRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/users/login`,
+                    `https://yourplace-backend-mern.vercel.app/api/users/login`,
                     'POST',
                     JSON.stringify({
                         email: formState.inputs.email.value,
@@ -102,7 +102,7 @@ const Auth = () => {
                 console.log(formData);
 
                 const responseData = await sendRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/users/signup`,
+                    `https://yourplace-backend-mern.vercel.app/api/users/signup`,
                     'POST',
                     formData, {
                     Authorization: 'Bearer ' + auth.token
